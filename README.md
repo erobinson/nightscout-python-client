@@ -1,3 +1,8 @@
+# start by checking out the API docs
+
+https://<your-site>.herokuapp.com/api-docs/
+https://<your-site>.herokuapp.com/api3-docs/
+
 # nightscout-python-client
 Own your Data with the Nightscout API
 

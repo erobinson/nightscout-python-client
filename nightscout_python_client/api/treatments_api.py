@@ -18,6 +18,7 @@ import re  # noqa: F401
 import six
 
 from nightscout_python_client.api_client import ApiClient
+from nightscout_python_client.api.util import ALL_PARAMS, parse_query_params
 
 
 class TreatmentsApi(object):
@@ -216,7 +217,7 @@ class TreatmentsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def treatments_get(self, **kwargs):  # noqa: E501
+    def treatments_get(self, spec, **kwargs):  # noqa: E501
         """Treatments  # noqa: E501
 
         The Treatments endpoint returns information about the Nightscout treatments.  # noqa: E501
@@ -234,12 +235,12 @@ class TreatmentsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.treatments_get_with_http_info(**kwargs)  # noqa: E501
+            return self.treatments_get_with_http_info(spec, **kwargs)  # noqa: E501
         else:
-            (data) = self.treatments_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.treatments_get_with_http_info(spec,**kwargs)  # noqa: E501
             return data
 
-    def treatments_get_with_http_info(self, **kwargs):  # noqa: E501
+    def treatments_get_with_http_info(self, spec, **kwargs):  # noqa: E501
         """Treatments  # noqa: E501
 
         The Treatments endpoint returns information about the Nightscout treatments.  # noqa: E501
@@ -256,7 +257,8 @@ class TreatmentsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['find', 'count']  # noqa: E501
+        # all_params = ['find', 'count']  # noqa: E501
+        all_params = ALL_PARAMS
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -276,11 +278,13 @@ class TreatmentsApi(object):
 
         path_params = {}
 
-        query_params = []
-        if 'find' in params:
-            query_params.append(('find', params['find']))  # noqa: E501
-        if 'count' in params:
-            query_params.append(('count', params['count']))  # noqa: E501
+        # query_params = []
+        # if 'find' in params:
+        #     query_params.append(('find', params['find']))  # noqa: E501
+        # if 'count' in params:
+        #     query_params.append(('count', params['count']))  # noqa: E501
+
+        query_params = parse_query_params(params)
 
         header_params = {}
 
