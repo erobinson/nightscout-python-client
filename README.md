@@ -1,7 +1,22 @@
-# start by checking out the API docs
+# WARNING
+**WARNING WARNING WARNING WARNING WARNING**
+
+Most of this doesn't work! This is a very initial version, only tested getting cgm entries & treatment notes so far with a few query parameters.
+
+**WARNING WARNING WARNING WARNING WARNING**
+
+This code was generated using a swagger python code generator.
+
+
+
+
+# Start by checking out the API docs
 
 https://<your-site>.herokuapp.com/api-docs/
+
 https://<your-site>.herokuapp.com/api3-docs/
+
+
 
 # nightscout-python-client
 Own your Data with the Nightscout API

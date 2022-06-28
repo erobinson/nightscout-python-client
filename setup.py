@@ -26,14 +26,14 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Nightscout API",
-    author_email="",
-    url="",
+    description="Nightscout Python Client",
+    author_email="Edward.R.Robinson@gmail.com",
+    url="https://github.com/erobinson/nightscout-python-client",
     keywords=["Swagger", "Nightscout API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Own your DData with the Nightscout API  # noqa: E501
+    Python project to pull data from nightscout. WARNING: Currently most of the code does NOT work!  # noqa: E501
     """
 )
